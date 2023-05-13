@@ -20,7 +20,7 @@ func InitApp() (string, []string) {
 }
 
 func main() {
-
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.GET("/movies", Movies.GetMovies)
 	router.GET("/movies/:id", Movies.GetMovie)
