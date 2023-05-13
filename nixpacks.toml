@@ -1,5 +1,5 @@
 [phases.install]
-nixPkgs = ['go mod download', 'go get awesomeProject']
+cmds = ['go mod download', 'go get awesomeProject']
 
 [phases.build]
 cmds = ['go build -o out.exe']
