@@ -1,4 +1,4 @@
-[phases.setup]
+[phases.install]
 nixPkgs = ['go mod download', 'go get awesomeProject']
 
 [phases.build]
