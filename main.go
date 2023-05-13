@@ -20,7 +20,7 @@ func InitApp() (string, []string) {
 }
 
 func main() {
-	
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.GET("/movies", Movies.GetMovies)
 	router.GET("/movies/:id", Movies.GetMovie)
@@ -33,7 +33,7 @@ func main() {
 
 	router.Use(cors.Default())
 
-	router.Run("localhost:8080")
+	router.Run("8080")
 	//go Movies.HttpServer("localhost:8082")
 
 }
